@@ -1,6 +1,17 @@
 h1{
     text-decoration: underline;
+    margin-top: 40px;
 }
 body{
     color: red;
+}
+form{
+    display: inline;
+    padding-left: 10px;
+}
+h2{
+    display: inline;
+}
+ul{
+    margin-top: 40px;
 }

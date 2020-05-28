@@ -68,6 +68,7 @@ app.get('/index', (req, res)=>{
 });
 app.post('/index', (req, res) => {
     ToDo.create(req.body, (error, createdToDo) => {
+        
         res.redirect('/index');
     });
 });
