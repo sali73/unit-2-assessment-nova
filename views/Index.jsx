@@ -6,20 +6,19 @@ class Index extends React.Component {
         return (
             <Layout>
                 <h1>To Do List</h1>
-                <h3>"There are no To Dos yet!"</h3>
+                <h3>{this.props.ToDo.length > 0 ? '' : 'There are no To Dos yet!'}</h3>
                 <ul>
                     {ToDo.map((ToDo, i) => {
                             console.log(ToDo._id)
                             return (
                                 <div>
                                 <li>
-                                    <div className='form'>
                                    <h2>{ToDo.data}</h2>
                                     {/* DELETE */}
                                     <form action={`/index/${ToDo._id}?_method=DELETE`} method="POST">
                                          <input type="submit" value="DELETE"/>
                                     </form><br/>
-                                    </div>
+                                   
                                 </li> 
                               </div>
                             )
